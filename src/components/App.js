@@ -177,20 +177,23 @@ function App() {
   return (
     <div id="main">
       {stt.map((st, idx) => (
-        <li id={`state${idx}`} onClick={() => handleCity(st.cities)}>
+        <li id={`state${idx + 1}`} onClick={() => handleCity(st.cities)}>
           {st.name}
         </li>
       ))}
       <div>
         {city &&
           city.map((townd, idx) => (
-            <button id={`city${idx}`} onClick={() => handleTowns(townd.towns)}>
+            <button
+              id={`city${idx + 1}`}
+              onClick={() => handleTowns(townd.towns)}
+            >
               {townd.name}
             </button>
           ))}
       </div>
       {tow &&
-        tow.map((to, idx) => <button id={`towns${idx}`}>{to.name}</button>)}
+        tow.map((to, idx) => <button id={`towns${idx + 1}`}>{to.name}</button>)}
     </div>
   );
 }
