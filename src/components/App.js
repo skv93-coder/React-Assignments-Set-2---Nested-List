@@ -193,7 +193,7 @@ function App() {
           ))}
       </div>
       {tow &&
-        tow.map((to, idx) => <button id={`towns${idx + 1}`}>{to.name}</button>)}
+        tow.map((to, idx) => <button id={`town${idx + 1}`}>{to.name}</button>)}
     </div>
   );
 }
